@@ -1,0 +1,8 @@
+<md-list>
+  <md-list-item ng-repeat="link in $ctrl.links">
+    <md-button style="text-align:left;" ng-href="{{link.url}}" flex>
+      <md-icon>{{link.icon}}</md-icon>
+      {{link.text}}
+    </md-button>
+  </md-list-item>
+</md-list>
