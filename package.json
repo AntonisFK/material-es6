@@ -57,7 +57,9 @@
   "scripts": {
     "test": "karma start --single-run",
     "test:watch": "karma start --watch",
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "webpack": "webpack",
+    "babel": "babel"
   },
   "keywords": [
     "angular",
