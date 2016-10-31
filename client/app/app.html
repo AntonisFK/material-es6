@@ -1,12 +1,15 @@
 <div layout="column" flex>
   <md-toolbar md-scroll-shrink ng-if="true" layout="row">
-    <md-button ng-click="$ctrl.toggle()">
-      <md-icon>menu</md-icon>
-    </md-button>
     <div class="md-toolbar-tools">
       <h3>
         <span>Toolbar</span>
       </h3>
+
+      <span flex></span>
+
+      <md-button ng-hide="$ctrl.$mdMedia('gt-md')" ng-click="$ctrl.toggleNavigation()">
+        <md-icon>menu</md-icon>
+      </md-button>
     </div>
   </md-toolbar>
 
@@ -18,9 +21,18 @@
     <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
 
       <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+        <div class="md-toolbar-tools">
+          <h1 class="md-toolbar-tools">Navigation</h1>
+
+          <span flex></span>
+          
+          <md-button ng-click="$ctrl.toggleNavigation()">
+            <md-icon>clear</md-icon>
+          </md-button>
+        </div>
       </md-toolbar>
 
+      <sidenav></sidenav>
     </md-sidenav>
 
     <md-content flex>

@@ -10,20 +10,20 @@ import 'angular-aria';
 import 'angular-material';
 
 angular.module('app', [
-    uiRouter,
-    'ngMaterial',
-    Common,
-    Components
-  ])
+  uiRouter,
+  'ngMaterial',
+  Common,
+  Components
+])
   .config(($locationProvider, $mdThemingProvider) => {
-    "ngInject";
+    'ngInject';
     // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
     // #how-to-configure-your-server-to-work-with-html5mode
     $locationProvider.html5Mode(true).hashPrefix('!');
     $mdThemingProvider.theme('indigo');
   })
   .run(($rootScope, $mdToast) => {
-    "ngInject";
+    'ngInject';
     $rootScope.$on('message',
       (e, message) => {
         $mdToast.show(
